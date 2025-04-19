@@ -4,8 +4,6 @@ ENV DB_HOST="mysql"
 RUN mkdir /opt/server
 WORKDIR /opt/server
 COPY package.json .
-COPY TransactionService.js .
-COPY DbConfig.js .
-COPY index.js .
+COPY *.js .
 RUN npm install
-CMD ["node","index.js"]
+CMD ["node", "index.js"]
